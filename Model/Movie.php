@@ -32,7 +32,7 @@ class Movie {
     public function printCard(){
         $image = $this ->poster_path;
         $title = $this ->title;
-        $content = $this ->overview;
+        $content = substr($this->overview, 0, 100) . "...";
         $custom = $this ->vote_average;
         include __DIR__. '/../Views/card.php';
     }
